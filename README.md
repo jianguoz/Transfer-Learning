@@ -18,7 +18,7 @@ Make sure you clone this repository into the transfer-learning directory.
 
 ## Installation
 
-The `requirements.txt` describing the minimal dependencies required to run this program.
+The program using `TensorFlow==1.0.0` and `python==3.6.0 `. The `requirements.txt` describing the minimal dependencies required to run this program. 
 
 If you have most packages, you can just install Additional Packages
 
