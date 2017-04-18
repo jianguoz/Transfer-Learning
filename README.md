@@ -3,7 +3,7 @@
 
 In practice, we won't typically be training our own huge networks since it may take several days. 
 There are multiple models out there that have been trained for weeks on huge datasets like ImageNet.
-In this project, we use one of these pretrained networks, VGGNet(https://github.com/machrisaa/tensorflow-vgg), to classify images of flowers.
+In this project, we use one of these pretrained networks, [VGGNet](https://github.com/machrisaa/tensorflow-vgg), to classify images of flowers.
 
 Make sure you clone this repository into the transfer-learning directory.
 
