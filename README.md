@@ -6,7 +6,9 @@
 
 Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune.
 
-In this program, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor to classify flowers. Below is a diagram of the VGGNet architecture.
+In this program, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor to classify flowers. The flower dataset comes from the [TensorFlow inception tutorial](https://www.tensorflow.org/tutorials/image_retraining).
+
+Below is a diagram of the VGGNet architecture.
 
 
 ![image1](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/assets/cnnarchitecture.jpg)
