@@ -1,7 +1,8 @@
 # Transfer-Learning
 
 ## VGGNet
-### Jianguo Zhang, April 17, 2017
+
+**Jianguo Zhang, April 17, 2017**
 
 Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune. In this notebook, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor. Below is a diagram of the VGGNet architecture.
 
