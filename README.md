@@ -35,7 +35,8 @@ If you have most packages, you can just install Additional Packages
 To install these dependencies with pip, you can issue `pip3 install -r requirements.txt`.
 
 ## AlexNet
-### Jianguo Zhang, April 19, 2017
+
+**Jianguo Zhang, April 19, 2017**
 
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
