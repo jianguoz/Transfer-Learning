@@ -36,7 +36,9 @@ To install these dependencies with pip, you can issue `pip3 install -r requireme
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
 <img src="AlexNet_image.png" width=700px>
-![Alt text](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/AlexNet_image.png) 
+[image1]: AlexNet_image.png
+
+[image1]
 
 In this program, we extract AlexNet's features and use them to classify images from the [German Traffic Sign Recognition Benchmark dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset), which includes 43 classes. The orignal AlexNet classifies for 1000 classes.
 
