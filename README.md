@@ -36,7 +36,7 @@ To install these dependencies with pip, you can issue `pip3 install -r requireme
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
 <img src="AlexNet_image.png" width=700px>
-[image1]: AlexNet_image.png
+![image1](AlexNet_image.png)
 
 [image1]
 
