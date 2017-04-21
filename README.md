@@ -35,15 +35,16 @@ To install these dependencies with pip, you can issue `pip3 install -r requireme
 
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
+In this program, we extract AlexNet's features and use them to classify images from the [German Traffic Sign Recognition Benchmark dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset), which includes 43 classes. The orignal AlexNet includes 1000 classes.
+
 Download the [train data](https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580a829f_train/train.p) and [AlexNet weights](https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580d880c_bvlc-alexnet/bvlc-alexnet.npyhttps://d17h27t6h515a5.cloudfront.net/topher/2016/October/580d880c_bvlc-alexnet/bvlc-alexnet.npy)
 
-`unzip CarND-Alexnet-Feature-Extraction`
 
 Make sure the all the files are in the same directory as the code.
 
 `cd CarND-Alexnet-Feature-Extraction`
 
-We add a line **fc7 = tf.stop_gradient(fc7)**, Note `tf.stop_gradient` prevents the gradient from flowing backwards past this point, keeping the weights before and up to `fc7` frozen. This also makes training faster, less work to do!
+We add a line fc7 = tf.stop_gradient(fc7), Note `tf.stop_gradient` prevents the gradient from flowing backwards past this point, keeping the weights before and up to `fc7` frozen. This also makes training faster, less work to do!
 
 Train the AlexNet
 
