@@ -45,6 +45,8 @@ To install these dependencies with pip, you can issue `pip3 install -r requireme
 
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
+Below is a diagram of the AlexNet architecture.
+
 ![image](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/AlexNet_image.png)
 
 
