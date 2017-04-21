@@ -1,7 +1,8 @@
 # Transfer-Learning
+
+# VGGNet
 ### Jianguo Zhang, April 17, 2017
 
-## VGGNet
 Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune. In this notebook, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor. Below is a diagram of the VGGNet architecture.
 
 
@@ -32,7 +33,8 @@ If you have most packages, you can just install Additional Packages
 
 To install these dependencies with pip, you can issue `pip3 install -r requirements.txt`.
 
-## AlexNet
+# AlexNet
+### Jianguo Zhang, April 19, 2017
 
 AlexNet is a popular base network for transfer learning because its structure is relatively straightforward, it's not too big, and it performs well empirically.
 
