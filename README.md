@@ -4,7 +4,9 @@
 
 ### Jianguo Zhang, April 17, 2017
 
-Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune. In this notebook, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor. Below is a diagram of the VGGNet architecture.
+Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune.
+
+In this program, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor to classify flowers. Below is a diagram of the VGGNet architecture.
 
 
 ![image1](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/assets/cnnarchitecture.jpg)
@@ -55,7 +57,7 @@ Make sure the all the files are in the same directory as the code.
 
 `cd CarND-Alexnet-Feature-Extraction`
 
-We add a line fc7 = tf.stop_gradient(fc7), Note `tf.stop_gradient` prevents the gradient from flowing backwards past this point, keeping the weights before and up to `fc7` frozen. This also makes training faster, less work to do!
+We add a line fc7 = tf.stop_gradient(fc7), Note tf.stop_gradient prevents the gradient from flowing backwards past this point, keeping the weights before and up to fc7 frozen. This also makes training faster, less work to do!
 
 Train the AlexNet
 
