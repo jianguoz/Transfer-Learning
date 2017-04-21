@@ -4,7 +4,8 @@
 ## VGGNet
 Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune. In this notebook, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor. Below is a diagram of the VGGNet architecture.
 
-<img src="assets/cnnarchitecture.jpg" width=700px>
+
+![image1](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/assets/cnnarchitecture.jpg)
 
 VGGNet is great because it's simple and has great performance, coming in second in the ImageNet competition. The idea here is that we keep all the convolutional layers, but replace the final fully connected layers with our own classifier. So what we want are the values of the first fully connected layer, after being ReLUd (self.relu6). This way we can use VGGNet as a feature extractor for our images then easily train a simple classifier on top of that. What we'll do is take the first fully connected layer with 4096 units, including thresholding with ReLUs. We can use those values as a code for each image, then build a classifier on top of those codes.
 
