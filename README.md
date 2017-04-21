@@ -1,6 +1,7 @@
 # Transfer-Learning
 ### Jianguo Zhang, April 17, 2017
 
+## VGGNet
 Most of the time we won't want to train a whole convolutional network yourself. Modern ConvNets training on huge datasets like ImageNet take weeks on multiple GPUs. Instead, most people use a pretrained network either as a fixed feature extractor, or as an initial network to fine tune. In this notebook, we'll be using [VGGNet](https://arxiv.org/pdf/1409.1556.pdf) trained on the [ImageNet dataset](http://www.image-net.org/) as a feature extractor. Below is a diagram of the VGGNet architecture.
 
 <img src="assets/cnnarchitecture.jpg" width=700px>
@@ -29,5 +30,16 @@ If you have most packages, you can just install Additional Packages
 ### pip
 
 To install these dependencies with pip, you can issue `pip3 install -r requirements.txt`.
+
+## AlexNet
+
+wget [train.p](https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580a829f_train/train.p) and [AlexNet weights](https://d17h27t6h515a5.cloudfront.net/topher/2016/October/580d880c_bvlc-alexnet/bvlc-alexnet.npyhttps://d17h27t6h515a5.cloudfront.net/topher/2016/October/580d880c_bvlc-alexnet/bvlc-alexnet.npy)
+
+`unzip CarND-Alexnet-Feature-Extraction`
+`cd CarND-Alexnet-Feature-Extraction`
+`python train_feature_extraction.py`
+
+Training AlexNet (even just the final layer!) can take a little while, so if you don't have a GPU, running on a subset of the data is a good alternative. As a point of reference one epoch over the training set takes roughly 53-55 seconds with a GTX 970.
+
 
 
