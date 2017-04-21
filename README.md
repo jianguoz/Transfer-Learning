@@ -24,6 +24,8 @@ Make sure you clone this repository into the transfer-learning directory.
 
 `git clone https://github.com/machrisaa/tensorflow-vgg.git tensorflow_vgg`
 
+Run `Transfer_Learning.ipynb` cell by cell or just refer the online result `Transfer_Learning.html`.
+
 ### Installation
 
 The program using `TensorFlow==1.0.0` and `python==3.6.0 `. The `requirements.txt` describing the minimal dependencies required to run this program. 
