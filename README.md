@@ -152,9 +152,9 @@ After 50 epochs these are the results for each model on the German Traffic Sign 
 
 **Inception(GoogLeNet)**:
 
-`Epoch 50/50
+`Epoch 50/50`
 
-4300/4300 [==============================] - 0s - loss: 0.0276 - acc: 1.0000 - val_loss: 0.8378 - val_acc: 0.7519`
+`4300/4300 [==============================] - 0s - loss: 0.0276 - acc: 1.0000 - val_loss: 0.8378 - val_acc: 0.7519`
 
 **ResNet**:
 
