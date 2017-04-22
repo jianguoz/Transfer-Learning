@@ -84,10 +84,12 @@ There are some notable differences from AlexNet program.
 2. Bottleneck Features. Unless you have a very powerful GPU, running feature extraction on these models will take a significant amount of time, as you might have observed in the AlexNet lab. To make things easier we've precomputed bottleneck features for each (network, dataset) pair. This will allow you to experiment with feature extraction even on a modest CPU. You can think of bottleneck features as feature extraction but with caching. Because the base network weights are frozen during feature extraction, the output for an image will always be the same. Thus, once the image has already been passed through the network, we can cache and reuse the output.
 
 3. Furthermore, we've limited each class in both training datasets to 100 examples. The idea here is to push feature extraction a bit further. It also greatly reduces the download size and speeds up training. The validation files remain the same.
+
 The files are encoded as such:
 
-{network}_{dataset}_100_bottleneck_features_train.p
-{network}_{dataset}_bottleneck_features_validation.p
+* {network}_{dataset}_100_bottleneck_features_train.p
+* {network}_{dataset}_bottleneck_features_validation.p
+
 "network", in the above filenames, can be one of 'vgg', 'inception', or 'resnet'.
 
 "dataset" can be either 'cifar10' or 'traffic'.
