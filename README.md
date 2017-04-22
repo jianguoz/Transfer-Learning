@@ -71,5 +71,85 @@ Train the AlexNet
 
 Training AlexNet (even just the final layer!) can take a little while, so if you don't have a GPU, running on a subset of the data is a good alternative. As a point of reference one epoch over the training set takes roughly 53-55 seconds with a GTX 970.
 
+## Comparisons of Inceptions(GoogLeNet), ReseNet, VGGnet
+
+### Jianguo Zhang, April 22, 2017
+
+ We will use [Keras](https://keras.io/) to explore feature extraction with the VGG, Inception and ResNet architectures. The models you will use were trained for days or weeks on the ImageNet dataset. Thus, the weights encapsulate higher-level features learned from training on thousands of classes.
+
+There are some notable differences from AlexNet program.
+
+We're using two datasets. First, the German Traffic Sign dataset, and second, the Cifar10 dataset.
+Bottleneck Features. Unless you have a very powerful GPU, running feature extraction on these models will take a significant amount of time, as you might have observed in the AlexNet lab. To make things easier we've precomputed bottleneck features for each (network, dataset) pair. This will allow you to experiment with feature extraction even on a modest CPU. You can think of bottleneck features as feature extraction but with caching. Because the base network weights are frozen during feature extraction, the output for an image will always be the same. Thus, once the image has already been passed through the network, we can cache and reuse the output.
+
+Furthermore, we've limited each class in both training datasets to 100 examples. The idea here is to push feature extraction a bit further. It also greatly reduces the download size and speeds up training. The validation files remain the same.
+The files are encoded as such:
+
+{network}_{dataset}_100_bottleneck_features_train.p
+{network}_{dataset}_bottleneck_features_validation.p
+"network", in the above filenames, can be one of 'vgg', 'inception', or 'resnet'.
+
+"dataset" can be either 'cifar10' or 'traffic'.
+
+Download one of the bottleneck feature packs. VGG is the smallest so you might want to give that a shot first
+
+`cd CarND-Transfer-Learning`
+
+Dwonload [VGG Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b432_vgg-100/vgg-100.zip), [ResNet Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b634_resnet-100/resnet-100.zip) and [InceptionV3 Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b498_inception-100/inception-100.zip)
+
+Here we define some command line flags like following, this avoids having to manually open and edit the file if we want to change the files we train and validate our model with.
 
 
+flags.DEFINE_string('training_file', '', "Bottleneck features training file (.p)")
+
+flags.DEFINE_string('validation_file', '', "Bottleneck features validation file (.p)")
+
+Here's how you would run the file from the command line:
+
+`python feature_extraction.py --training_file vgg_cifar10_100_bottleneck_features_train.p --validation_file vgg_cifar10_bottleneck_features_validation.p`
+
+After 50 epochs these are the results for each model on cifar-10 dataset:
+
+VGG:
+
+Epoch 50/50
+
+1000/1000 [==============================] - 0s - loss: 0.2418 - acc: 0.9540 - val_loss: 0.8759 - val_acc: 0.7235
+
+Inception(GoogLeNet):
+
+Epoch 50/50
+
+1000/1000 [==============================] - 0s - loss: 0.0887 - acc: 1.0000 - val_loss: 1.0428 - val_acc: 0.6556
+
+ResNet:
+
+Epoch 50/50
+
+1000/1000 [==============================] - 0s - loss: 0.0790 - acc: 1.0000 - val_loss: 0.8005 - val_acc: 0.7347
+
+ Now do the same thing but with the German Traffic Sign dataset. The ImageNet dataset with 1000 classes had no traffic sign images. Will the high-level features learned still be transferable to such a different dataset?
+ 
+ Staying with the VGG example:
+
+ `python feature_extraction.py --training_file bottlenecks/vgg_traffic_100_bottleneck_features_train.p --validation_file bottlenecks/vgg_traffic_bottleneck_features_validation.p`
+
+After 50 epochs these are the results for each model on the German Traffic Sign dataset:
+
+VGG:
+
+Epoch 50/50
+
+4300/4300 [==============================] - 0s - loss: 0.0873 - acc: 0.9958 - val_loss: 0.4368 - val_acc: 0.8666
+
+Inception(GoogLeNet):
+
+Epoch 50/50
+
+4300/4300 [==============================] - 0s - loss: 0.0276 - acc: 1.0000 - val_loss: 0.8378 - val_acc: 0.7519
+
+ResNet:
+
+Epoch 50/50
+
+4300/4300 [==============================] - 0s - loss: 0.0332 - acc: 1.0000 - val_loss: 0.6146 - val_acc: 0.8108
