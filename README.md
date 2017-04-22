@@ -79,10 +79,11 @@ Training AlexNet (even just the final layer!) can take a little while, so if you
 
 There are some notable differences from AlexNet program.
 
-We're using two datasets. First, the German Traffic Sign dataset, and second, the Cifar10 dataset.
-Bottleneck Features. Unless you have a very powerful GPU, running feature extraction on these models will take a significant amount of time, as you might have observed in the AlexNet lab. To make things easier we've precomputed bottleneck features for each (network, dataset) pair. This will allow you to experiment with feature extraction even on a modest CPU. You can think of bottleneck features as feature extraction but with caching. Because the base network weights are frozen during feature extraction, the output for an image will always be the same. Thus, once the image has already been passed through the network, we can cache and reuse the output.
+1. We're using two datasets. First, the German Traffic Sign dataset, and second, the Cifar10 dataset.
 
-Furthermore, we've limited each class in both training datasets to 100 examples. The idea here is to push feature extraction a bit further. It also greatly reduces the download size and speeds up training. The validation files remain the same.
+2. Bottleneck Features. Unless you have a very powerful GPU, running feature extraction on these models will take a significant amount of time, as you might have observed in the AlexNet lab. To make things easier we've precomputed bottleneck features for each (network, dataset) pair. This will allow you to experiment with feature extraction even on a modest CPU. You can think of bottleneck features as feature extraction but with caching. Because the base network weights are frozen during feature extraction, the output for an image will always be the same. Thus, once the image has already been passed through the network, we can cache and reuse the output.
+
+3. Furthermore, we've limited each class in both training datasets to 100 examples. The idea here is to push feature extraction a bit further. It also greatly reduces the download size and speeds up training. The validation files remain the same.
 The files are encoded as such:
 
 {network}_{dataset}_100_bottleneck_features_train.p
@@ -110,23 +111,23 @@ Here's how you would run the file from the command line:
 
 After 50 epochs these are the results for each model on cifar-10 dataset:
 
-VGG:
+**VGG**:
 
-Epoch 50/50
+`Epoch 50/50
 
-1000/1000 [==============================] - 0s - loss: 0.2418 - acc: 0.9540 - val_loss: 0.8759 - val_acc: 0.7235
+1000/1000 [==============================] - 0s - loss: 0.2418 - acc: 0.9540 - val_loss: 0.8759 - val_acc: 0.7235`
 
-Inception(GoogLeNet):
+**Inception(GoogLeNet)**:
 
-Epoch 50/50
+`Epoch 50/50
 
-1000/1000 [==============================] - 0s - loss: 0.0887 - acc: 1.0000 - val_loss: 1.0428 - val_acc: 0.6556
+1000/1000 [==============================] - 0s - loss: 0.0887 - acc: 1.0000 - val_loss: 1.0428 - val_acc: 0.6556`
 
-ResNet:
+**ResNet**:
 
-Epoch 50/50
+`Epoch 50/50
 
-1000/1000 [==============================] - 0s - loss: 0.0790 - acc: 1.0000 - val_loss: 0.8005 - val_acc: 0.7347
+1000/1000 [==============================] - 0s - loss: 0.0790 - acc: 1.0000 - val_loss: 0.8005 - val_acc: 0.7347`
 
  Now do the same thing but with the German Traffic Sign dataset. The ImageNet dataset with 1000 classes had no traffic sign images. Will the high-level features learned still be transferable to such a different dataset?
  
@@ -136,20 +137,20 @@ Epoch 50/50
 
 After 50 epochs these are the results for each model on the German Traffic Sign dataset:
 
-VGG:
+**VGG**:
 
-Epoch 50/50
+`Epoch 50/50
 
-4300/4300 [==============================] - 0s - loss: 0.0873 - acc: 0.9958 - val_loss: 0.4368 - val_acc: 0.8666
+4300/4300 [==============================] - 0s - loss: 0.0873 - acc: 0.9958 - val_loss: 0.4368 - val_acc: 0.8666`
 
-Inception(GoogLeNet):
+**Inception(GoogLeNet)**:
 
-Epoch 50/50
+`Epoch 50/50
 
-4300/4300 [==============================] - 0s - loss: 0.0276 - acc: 1.0000 - val_loss: 0.8378 - val_acc: 0.7519
+4300/4300 [==============================] - 0s - loss: 0.0276 - acc: 1.0000 - val_loss: 0.8378 - val_acc: 0.7519`
 
-ResNet:
+**ResNet**:
 
-Epoch 50/50
+`Epoch 50/50
 
-4300/4300 [==============================] - 0s - loss: 0.0332 - acc: 1.0000 - val_loss: 0.6146 - val_acc: 0.8108
+4300/4300 [==============================] - 0s - loss: 0.0332 - acc: 1.0000 - val_loss: 0.6146 - val_acc: 0.8108`
