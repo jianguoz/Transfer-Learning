@@ -96,6 +96,10 @@ The files are encoded as such:
 
 Download one of the bottleneck feature packs from [VGG Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b432_vgg-100/vgg-100.zip), [ResNet Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b634_resnet-100/resnet-100.zip) and [InceptionV3 Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b498_inception-100/inception-100.zip). VGG is the smallest so you might want to give that a shot first
 
+Make sure the all the files are in the same directory as the code.
+
+`unzip CarND-Transfer-Learning.zip`
+
 `cd CarND-Transfer-Learning`
 
 
