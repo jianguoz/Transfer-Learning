@@ -153,6 +153,6 @@ After 50 epochs these are the results for each model on the German Traffic Sign 
 
 **ResNet**:
 
-`Epoch 50/50
+Epoch 50/50
 
-4300/4300 [==============================] - 0s - loss: 0.0332 - acc: 1.0000 - val_loss: 0.6146 - val_acc: 0.8108`
+4300/4300 [==============================] - 0s - loss: 0.0332 - acc: 1.0000 - val_loss: 0.6146 - val_acc: 0.8108
