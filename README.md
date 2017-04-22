@@ -94,18 +94,18 @@ The files are encoded as such:
 
 "dataset" can be either 'cifar10' or 'traffic'.
 
-Download one of the bottleneck feature packs. VGG is the smallest so you might want to give that a shot first
+Download one of the bottleneck feature packs from [VGG Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b432_vgg-100/vgg-100.zip), [ResNet Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b634_resnet-100/resnet-100.zip) and [InceptionV3 Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b498_inception-100/inception-100.zip). VGG is the smallest so you might want to give that a shot first
 
 `cd CarND-Transfer-Learning`
 
-Dwonload [VGG Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b432_vgg-100/vgg-100.zip), [ResNet Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b634_resnet-100/resnet-100.zip) and [InceptionV3 Bottleneck Features 100](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5834b498_inception-100/inception-100.zip)
+
 
 Here we define some command line flags like following, this avoids having to manually open and edit the file if we want to change the files we train and validate our model with.
 
 
-flags.DEFINE_string('training_file', '', "Bottleneck features training file (.p)")
+* flags.DEFINE_string('training_file', '', "Bottleneck features training file (.p)")
 
-flags.DEFINE_string('validation_file', '', "Bottleneck features validation file (.p)")
+* flags.DEFINE_string('validation_file', '', "Bottleneck features validation file (.p)")
 
 Here's how you would run the file from the command line:
 
