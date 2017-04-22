@@ -115,21 +115,21 @@ After 50 epochs these are the results for each model on cifar-10 dataset:
 
 **VGG**:
 
-`Epoch 50/50
+`Epoch 50/50`
 
-1000/1000 [==============================] - 0s - loss: 0.2418 - acc: 0.9540 - val_loss: 0.8759 - val_acc: 0.7235`
+`1000/1000 [==============================] - 0s - loss: 0.2418 - acc: 0.9540 - val_loss: 0.8759 - val_acc: 0.7235`
 
 **Inception(GoogLeNet)**:
 
-`Epoch 50/50
+`Epoch 50/50`
 
-1000/1000 [==============================] - 0s - loss: 0.0887 - acc: 1.0000 - val_loss: 1.0428 - val_acc: 0.6556`
+`1000/1000 [==============================] - 0s - loss: 0.0887 - acc: 1.0000 - val_loss: 1.0428 - val_acc: 0.6556`
 
 **ResNet**:
 
-`Epoch 50/50
+`Epoch 50/50`
 
-1000/1000 [==============================] - 0s - loss: 0.0790 - acc: 1.0000 - val_loss: 0.8005 - val_acc: 0.7347`
+`1000/1000 [==============================] - 0s - loss: 0.0790 - acc: 1.0000 - val_loss: 0.8005 - val_acc: 0.7347`
 
  Now do the same thing but with the German Traffic Sign dataset. The ImageNet dataset with 1000 classes had no traffic sign images. Will the high-level features learned still be transferable to such a different dataset?
  
@@ -141,9 +141,9 @@ After 50 epochs these are the results for each model on the German Traffic Sign 
 
 **VGG**:
 
-`Epoch 50/50
+`Epoch 50/50`
 
-4300/4300 [==============================] - 0s - loss: 0.0873 - acc: 0.9958 - val_loss: 0.4368 - val_acc: 0.8666`
+`4300/4300 [==============================] - 0s - loss: 0.0873 - acc: 0.9958 - val_loss: 0.4368 - val_acc: 0.8666`
 
 **Inception(GoogLeNet)**:
 
@@ -153,6 +153,6 @@ After 50 epochs these are the results for each model on the German Traffic Sign 
 
 **ResNet**:
 
-Epoch 50/50
+`Epoch 50/50`
 
-4300/4300 [==============================] - 0s - loss: 0.0332 - acc: 1.0000 - val_loss: 0.6146 - val_acc: 0.8108
+`4300/4300 [==============================] - 0s - loss: 0.0332 - acc: 1.0000 - val_loss: 0.6146 - val_acc: 0.8108`
