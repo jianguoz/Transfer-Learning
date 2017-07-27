@@ -77,6 +77,8 @@ Training AlexNet (even just the final layer!) can take a little while, so if you
 
 ![image5](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/GoogleNet.gif)
 
+![image5](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/GoogleNet_2.jpg)
+
  We will use [Keras](https://keras.io/) to explore feature extraction with the VGG, Inception and ResNet architectures. The models you will use were trained for days or weeks on the ImageNet dataset. Thus, the weights encapsulate higher-level features learned from training on thousands of classes.
 
 
