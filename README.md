@@ -73,7 +73,7 @@ Training AlexNet (even just the final layer!) can take a little while, so if you
 
 ## Comparisons of Inceptions(GoogLeNet), ReseNet, VGGnet
 
-### Jianguo Zhang, April 22, 2017
+### Jianguo Zhang, April 22, 2017. Update in July, 27, 2017
 
 ![image5](https://github.com/JianguoZhang1994/Transfer-Learning/blob/master/GoogleNet.gif)
 
